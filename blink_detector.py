@@ -87,7 +87,7 @@ def calculate_blink_rate(video_path):
 rate_movie, total_movie = calculate_blink_rate("movie.mp4")
 rate_reading, total_reading = calculate_blink_rate("document_video.mp4")
 
-difference = rate_movie - rate_reading
+difference = abs(rate_movie - rate_reading)
 
 # print results
 print("Video 1 (Movie) Blinks:", total_movie)
@@ -96,4 +96,4 @@ print("Video 1 Blink Rate:", rate_movie)
 print("Video 2 (Reading) Blinks:", total_reading)
 print("Video 2 Blink Rate:", rate_reading)
 
-print("Difference in Blink Rate (Movie - Reading):", difference)
+print("Difference in Blink Rate:", difference)
